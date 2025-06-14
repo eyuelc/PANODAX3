@@ -13,8 +13,8 @@ interface Video {
   url: string;
 }
 
-const YOUTUBE_API_KEY = 'AIzaSyANepDu3DpWrv7O2ShsQXyaDQG8f4ksXgA';
-const CHANNEL_ID = 'UCkEYwxW6Ha4uw53scFVYFpA'; 
+const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+const CHANNEL_ID = import.meta.env.VITE_CHANNEL_ID; 
 
 export const LatestStreams: React.FC<LatestStreamsProps> = ({ darkMode }) => {
   const [isVisible, setIsVisible] = useState(false);
